@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tickets | Scary Park</title>
+    <link rel = "icon" href = 
+"./images/logo/werewolf.png" 
+        type = "image/x-icon">
+    <meta charset="utf-8">
+      <meta name="description" content="This is a page to sell tickets for 'Scary Park'">
+      <meta name="author" content="Team 65 - Tutor Group 07">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="refresh" content="600">
+      <meta name="keywords" content="Amusement Park Scary Park Fun">
+    <link href="./css/stylesheet.css" type="text/css" rel="stylesheet">
+    <script src='http://use.edgefonts.net/de-walpergens-pica.js'></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body style="background-image: url('images/css/creepy.jpeg');">
+    
+    <!--Navigation bar-->
+    <div id="nav">
+    </div>
+
+    <script>
+    $(function(){
+      $("#nav").load("shared/navigation.html");
+    });
+     // Get the container element
+    var btnContainer = document.getElementById("topnav");
+
+    // Get all buttons with class="btn" inside the container
+    var btns = btnContainer.getElementsByClassName("button");
+
+    // Loop through the buttons and add the active class to the current/clicked button
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+
+        // If there's no active class
+        if (current.length > 0) {
+          current[0].className = current[0].className.replace(" active", "");
+        }
+
+        // Add the active class to the current/clicked button
+        this.className += " active";
+      });
+    }
+    </script>
+    <!--end of Navigation bar-->
+
+    
+<h1 style="text-align: center">Tickets</h1>
+<p style="text-align: center">Welcome to the Scary Park tickets page. Get daily tickets or a Season pass!</p>
+<table class="editorDemoTable" style="background-image: url('images/css/best-scary.jpeg')">
+<tbody>
+<tr style="font-size: 25px">
+<td><span><strong>1 PARK ENTRY</strong></span></td>
+<td><span><strong>2 PARK ENTRIES</strong></span></td>
+<td><span><strong>SEASON PASS</strong></span></td>
+</tr>
+<tr style="font-size: 25px">
+<td>$ 30</td>
+<td>$ 45</td>
+<td>$ 100</td>
+</tr>
+<tr>
+<td style="padding: 0px"><button type="button">Select Date</button></td> <!-- </td> -->
+<td style="padding: 0px"><button type="button">Select Date</button></td> <!-- </td> -->
+<td style="padding: 0px">Until end of the Season</td>
+</tr>
+<tr>
+<td style="padding: 0px">Choose exact date to visit Scary Park</td>
+<td style="padding: 0px">Choose exact date to visit Scary Park</td>
+<td style="padding: 0px">Visit Scary Park as many times as you want</td>
+</tr>
+<tr>
+<td><button type="button">BUY</button></td>
+<td><button type="button">BUY</button></td>
+<td><button type="button">BUY</button></td>
+</tr>
+</tbody> 
+</table>
+
+        <footer>
+            <!--Footer-->
+            <!--
+            <div id="footer">  </div>
+
+            <script>
+            $(function(){
+              $("#footer").load("shared/footer.html");
+            });
+            </script>-->
+
+        </footer>
+    </body>
+</html>
